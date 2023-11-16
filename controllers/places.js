@@ -1,9 +1,24 @@
 const router = require("express").Router();
 
+
+router.get('/new', (req, res) => {
+  res.render('places/new')
+})
+
+
+
+
 router.get("/", (req, res) => {
     console.log(req.body)
   res.send("POST /places");
 });
+
+router.post('/', (req, res) => {
+  console.log(req.body)
+  res.send('POST /places')
+})
+
+
 
 module.exports = [{
     name: 'H-Thai-ML',
@@ -36,6 +51,6 @@ router.post('/', (req, res) => {
   })
   
   
-
+  
   
 module.exports = router;
