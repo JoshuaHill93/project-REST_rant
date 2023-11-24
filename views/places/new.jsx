@@ -31,12 +31,22 @@ function new_form() {
               name="cuisines"
               required
             />
-          </div>
+
+          </div><div className="form-group">
+  <label for="founded">Founded Year</label>
+  <input className="form-control" id="founded" name="founded" />
+</div>
+
+
           <input className="btn btn-primary" type="submit" value="Add Place" />
         </form>
       </main>
     </Def>
   );
 }
+
+
+
+
 
 module.exports = new_form;
