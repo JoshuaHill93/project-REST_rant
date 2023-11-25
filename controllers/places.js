@@ -33,6 +33,7 @@ router.get("/new", (req, res) => {
 router.get("/:id", (req, res) => {
   db.Place.findById(req.params.id)
     .then((place) => {
+      console.log({place})
       res.render("places/show", { place });
     })
     .catch((err) => {
@@ -61,7 +62,7 @@ router
   })
 
   //DELETE
-  .delete("/:id", (req, res) => {
+  router.delete("/:id", (req, res) => {
     db.Place,
       findByIdAndDelete(req.params.id).then(() => {
         res.redirect("/places");
